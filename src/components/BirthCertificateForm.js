@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function BirthCertificateForm() {
+  const [name, setName] = useState("");
+
+  const handleName = (event) => {
+    let valueOfName = event.target.value;
+    setName(valueOfName);
+  };
   return (
     <>
       <div className="container my-5">
@@ -16,6 +22,8 @@ export default function BirthCertificateForm() {
                   className="form-control"
                   id="exampleInputName"
                   placeholder="Enter Name"
+                  onChange={handleName}
+                  value={name}
                 />
               </div>
             </div>
