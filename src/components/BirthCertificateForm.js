@@ -1,8 +1,9 @@
 import React, { useState, useRef } from "react";
 import { format } from "date-fns";
 import { gu } from "date-fns/locale";
-import html2canvas from 'html2canvas';
+import html2canvas from "html2canvas";
 import "../css/BirthCertificateForm.css";
+import LoadingBar from "react-top-loading-bar";
 
 export default function BirthCertificateForm() {
   const [name, setName] = useState("");
@@ -19,6 +20,7 @@ export default function BirthCertificateForm() {
   const [doi, setDoi] = useState("");
   const [clicked, setClicked] = useState(false);
   const certificateRef = useRef(null);
+  const [progress, setProgress] = useState(0);
 
   const disableCreate =
     !name ||
@@ -130,34 +132,41 @@ export default function BirthCertificateForm() {
 
   const handleClick = (e) => {
     e.preventDefault(); // Prevent form submission
-    setClicked(true);
+    setProgress(50);
+    setTimeout(() => {
+      setProgress(100);
+      setClicked(true);
+    }, 2000);
   };
 
   // onclick end
 
   const downloadCertificateAsImage = () => {
-    const certificateElement = document.querySelector('.certificate'); // Replace with the appropriate selector
-  
+    const certificateElement = document.querySelector(".certificate"); // Replace with the appropriate selector
+
     if (!certificateElement) {
       console.error("Certificate content not found.");
       return;
     }
-  
+
     // Use html2canvas to capture the content of the certificateElement
-    html2canvas(certificateElement, { width: 1080, height: 1080 }).then((canvas) => {
-      // Convert the canvas to a data URL
-      const dataUrl = canvas.toDataURL("image/png");
-  
-      // Create a link element to trigger the download
-      const link = document.createElement("a");
-      link.href = dataUrl;
-      link.download = "certificate.png";
-      link.click();
-    });
+    html2canvas(certificateElement, { width: 1080, height: 1080 }).then(
+      (canvas) => {
+        // Convert the canvas to a data URL
+        const dataUrl = canvas.toDataURL("image/png");
+
+        // Create a link element to trigger the download
+        const link = document.createElement("a");
+        link.href = dataUrl;
+        link.download = "certificate.png";
+        link.click();
+      }
+    );
   };
-  
+
   return (
     <>
+      <LoadingBar color="#f11946" progress={progress} height={4}/>
       <div className="container my-5">
         <form>
           {/* first row */}
@@ -368,7 +377,7 @@ export default function BirthCertificateForm() {
             onClick={handleClick}
             disabled={disableCreate}
           >
-            Create Certificate
+            {progress ? "Loading..." : "Create Certificate"}
           </button>
         </form>
 
@@ -381,7 +390,7 @@ export default function BirthCertificateForm() {
                 height="1080px"
                 width="720px"
               />
-              
+
               <span className="name">{name}</span>
               <span className="gender">{gender}</span>
               <span className="dob">{formattedDob}</span>
@@ -399,7 +408,10 @@ export default function BirthCertificateForm() {
               <span className="dist-top">{dist}</span>
             </div>
             <div className="btn_container">
-              <button className="btn btn-success btn_download" onClick={downloadCertificateAsImage}>
+              <button
+                className="btn btn-success btn_download"
+                onClick={downloadCertificateAsImage}
+              >
                 Download Certificate
               </button>
             </div>
