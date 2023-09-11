@@ -27,6 +27,27 @@ button {
     justify-content: center;
 }
 
+.certificate .village-top {
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    margin: -445px 0 0 760px;
+}
+
+.certificate .taluka-top {
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    margin: -8px 0 0 425px;
+}
+
+.certificate .dist-top {
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    margin: -25px 0 0 290px;
+}
+
 .certificate .name {
     display: flex;
     position: relative;
@@ -117,6 +138,6 @@ button {
 .btn_container {
     display: flex;
     position: relative;
-    margin-top: 275px;
+    margin-top: 600px;
     justify-content: center;
 }

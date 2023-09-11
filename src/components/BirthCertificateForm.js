@@ -135,27 +135,27 @@ export default function BirthCertificateForm() {
 
   // onclick end
 
-// Function to capture and download the certificate as an image with custom dimensions
-const downloadCertificateAsImage = () => {
-  const certificateElement = document.querySelector('.certificate'); // Replace with the appropriate selector
-
-  if (!certificateElement) {
-    console.error("Certificate content not found.");
-    return;
-  }
-
-  // Use html2canvas to capture the content of the certificateElement
-  html2canvas(certificateElement, { width: 1080, height: 1080 }).then((canvas) => {
-    // Convert the canvas to a data URL
-    const dataUrl = canvas.toDataURL("image/png");
-
-    // Create a link element to trigger the download
-    const link = document.createElement("a");
-    link.href = dataUrl;
-    link.download = "certificate.png";
-    link.click();
-  });
-};
+  const downloadCertificateAsImage = () => {
+    const certificateElement = document.querySelector('.certificate'); // Replace with the appropriate selector
+  
+    if (!certificateElement) {
+      console.error("Certificate content not found.");
+      return;
+    }
+  
+    // Use html2canvas to capture the content of the certificateElement
+    html2canvas(certificateElement, { width: 1080, height: 1080 }).then((canvas) => {
+      // Convert the canvas to a data URL
+      const dataUrl = canvas.toDataURL("image/png");
+  
+      // Create a link element to trigger the download
+      const link = document.createElement("a");
+      link.href = dataUrl;
+      link.download = "certificate.png";
+      link.click();
+    });
+  };
+  
   return (
     <>
       <div className="container my-5">
@@ -381,6 +381,7 @@ const downloadCertificateAsImage = () => {
                 height="1080px"
                 width="720px"
               />
+              
               <span className="name">{name}</span>
               <span className="gender">{gender}</span>
               <span className="dob">{formattedDob}</span>
@@ -393,6 +394,9 @@ const downloadCertificateAsImage = () => {
               <span className="regno">{convertToGujaratiNumber(regno)}</span>
               <span className="dor">{formattedDor}</span>
               <span className="doi">{formattedDoi}</span>
+              <span className="village-top">{village}</span>
+              <span className="taluka-top">{taluka}</span>
+              <span className="dist-top">{dist}</span>
             </div>
             <div className="btn_container">
               <button className="btn btn-success btn_download" onClick={downloadCertificateAsImage}>
