@@ -1,0 +1,122 @@
+body {
+    background-color: #FFFFE0;
+}
+
+label {
+    font-size: larger;
+}
+
+input::placeholder {
+    font-size: larger;
+}
+
+form {
+    background-color: #AEC6CF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 10px 10px 10px rgba(139, 69, 19, 0.3);
+    /* Add shadow */
+}
+
+button {
+    width: 40%;
+}
+
+.certificate {
+
+    justify-content: center;
+}
+
+.certificate .name {
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    margin: -620px 0 0 390px;
+}
+
+.certificate .gender {
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    margin: -25px 0 0 705px;
+}
+
+.certificate .dob {
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    margin: 20px 0 0 390px;
+}
+
+.certificate .pob {
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    margin: -25px 0 0 705px;
+}
+
+.certificate .nom {
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    margin: 18px 0 0 395px;
+}
+
+.certificate .nof {
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    margin: -24px 0 0 710px;
+}
+
+.certificate .village {
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    margin: 60px 0 0 625px;
+}
+
+.certificate .taluka {
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    margin: -24px 0 0 710px;
+}
+
+.certificate .dist {
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    margin: -5px 0 0 625px;
+}
+
+.certificate .regno {
+    display: flex;
+    position: relative;
+    font-size: large;
+    font-weight: bold;
+    margin: 10px 0 0 400px;
+}
+
+.certificate .dor {
+    display: flex;
+    position: relative;
+    font-size: large;
+    font-weight: bold;
+    margin: -25px 0 0 715px;
+}
+
+.certificate .doi {
+    display: flex;
+    position: relative;
+    font-size: large;
+    font-weight: bold;
+    margin: 90px 0 0 415px
+}
+
+.btn_container {
+    display: flex;
+    position: relative;
+    margin-top: 275px;
+    justify-content: center;
+}
