@@ -141,3 +141,249 @@ button {
     margin-top: 600px;
     justify-content: center;
 }
+
+@media screen and (min-width: 1024px) {
+
+    .certificate {
+
+        justify-content: center;
+    }
+
+    .certificate .village-top {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -445px 0 0 675px;
+    }
+
+    .certificate .taluka-top {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -8px 0 0 335px;
+    }
+
+    .certificate .dist-top {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -25px 0 0 200px;
+    }
+
+    .certificate .name {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -620px 0 0 300px;
+    }
+
+    .certificate .gender {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -25px 0 0 620px;
+    }
+
+    .certificate .dob {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: 20px 0 0 300px;
+    }
+
+    .certificate .pob {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -25px 0 0 615px;
+    }
+
+    .certificate .nom {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: 18px 0 0 300px;
+    }
+
+    .certificate .nof {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -24px 0 0 615px;
+    }
+
+    .certificate .village {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: 60px 0 0 535px;
+    }
+
+    .certificate .taluka {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -24px 0 0 610px;
+    }
+
+    .certificate .dist {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -5px 0 0 535px;
+    }
+
+    .certificate .regno {
+        display: flex;
+        position: relative;
+        font-size: large;
+        font-weight: bold;
+        margin: 10px 0 0 300px;
+    }
+
+    .certificate .dor {
+        display: flex;
+        position: relative;
+        font-size: large;
+        font-weight: bold;
+        margin: -25px 0 0 615px;
+    }
+
+    .certificate .doi {
+        display: flex;
+        position: relative;
+        font-size: large;
+        font-weight: bold;
+        margin: 90px 0 0 315px
+    }
+
+    .btn_container {
+        display: flex;
+        position: relative;
+        margin-top: 600px;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .certificate {
+
+        justify-content: center;
+    }
+
+    .certificate .village-top {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -445px 0 0 760px;
+    }
+
+    .certificate .taluka-top {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -8px 0 0 425px;
+    }
+
+    .certificate .dist-top {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -25px 0 0 290px;
+    }
+
+    .certificate .name {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -620px 0 0 390px;
+    }
+
+    .certificate .gender {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -25px 0 0 710px;
+    }
+
+    .certificate .dob {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: 20px 0 0 390px;
+    }
+
+    .certificate .pob {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -25px 0 0 705px;
+    }
+
+    .certificate .nom {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: 18px 0 0 390px;
+    }
+
+    .certificate .nof {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -24px 0 0 705px;
+    }
+
+    .certificate .village {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: 60px 0 0 625px;
+    }
+
+    .certificate .taluka {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -24px 0 0 700px;
+    }
+
+    .certificate .dist {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        margin: -5px 0 0 625px;
+    }
+
+    .certificate .regno {
+        display: flex;
+        position: relative;
+        font-size: large;
+        font-weight: bold;
+        margin: 10px 0 0 390px;
+    }
+
+    .certificate .dor {
+        display: flex;
+        position: relative;
+        font-size: large;
+        font-weight: bold;
+        margin: -25px 0 0 705px;
+    }
+
+    .certificate .doi {
+        display: flex;
+        position: relative;
+        font-size: large;
+        font-weight: bold;
+        margin: 90px 0 0 405px
+    }
+
+    .btn_container {
+        display: flex;
+        position: relative;
+        margin-top: 600px;
+        justify-content: center;
+    }
+}
