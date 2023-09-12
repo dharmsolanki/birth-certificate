@@ -25,8 +25,13 @@ button {
 .certificate {
 
     justify-content: center;
+
 }
 
+.certificate span {
+    font-smooth: always;
+  }  
+  
 .certificate .village-top {
     display: flex;
     position: relative;
@@ -148,6 +153,10 @@ button {
 
         justify-content: center;
     }
+
+    .certificate span {
+        font-smooth: always;
+      }  
 
     .certificate .village-top {
         display: flex;
@@ -271,6 +280,10 @@ button {
 
         justify-content: center;
     }
+
+    .certificate span {
+        font-smooth: always;
+      }  
 
     .certificate .village-top {
         display: flex;

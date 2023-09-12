@@ -141,28 +141,42 @@ export default function BirthCertificateForm() {
 
   // onclick end
 
-  const downloadCertificateAsImage = () => {
-    const certificateElement = document.querySelector(".certificate"); // Replace with the appropriate selector
+const downloadCertificateAsImage = () => {
+  const certificateElement = document.querySelector(".certificate");
 
-    if (!certificateElement) {
-      console.error("Certificate content not found.");
-      return;
-    }
+  if (!certificateElement) {
+    console.error("Certificate content not found.");
+    return;
+  }
 
-    // Use html2canvas to capture the content of the certificateElement
-    html2canvas(certificateElement, { width: 1080, height: 1080 }).then(
-      (canvas) => {
-        // Convert the canvas to a data URL
-        const dataUrl = canvas.toDataURL("image/png");
+  // Use html2canvas to capture the content of the certificateElement
+  html2canvas(certificateElement, { width: 1080, height: 1080 }).then((canvas) => {
+    // Crop the canvas to remove left and right spaces
+    const croppedCanvas = cropOuterImage(canvas, 215, 50, 190, 80); // Adjust these values as needed
 
-        // Create a link element to trigger the download
-        const link = document.createElement("a");
-        link.href = dataUrl;
-        link.download = "certificate.png";
-        link.click();
-      }
-    );
-  };
+    // Convert the cropped canvas to a data URL
+    const dataUrl = croppedCanvas.toDataURL("image/png");
+
+    // Create a link element to trigger the download
+    const link = document.createElement("a");
+    link.href = dataUrl;
+    link.download = "certificate.png";
+    link.click();
+  });
+};
+
+// Function to crop from outer side
+const cropOuterImage = (image, left, top, right, bottom) => {
+  const canvas = document.createElement("canvas");
+  const width = image.width - left - right;
+  const height = image.height - top - bottom;
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext("2d");
+  ctx.drawImage(image, left, top, width, height, 0, 0, width, height);
+  return canvas;
+};
+
 
   return (
     <>
@@ -377,7 +391,7 @@ export default function BirthCertificateForm() {
             onClick={handleClick}
             disabled={disableCreate}
           >
-            {progress ? "Loading..." : "Create Certificate"}
+            Create Certificate
           </button>
         </form>
 
