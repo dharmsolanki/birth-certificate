@@ -387,7 +387,7 @@ const cropOuterImage = (image, left, top, right, bottom) => {
             </div>
           </div>
           <button
-            className="btn btn-info mt-4"
+            className="btn btn-success mt-4"
             onClick={handleClick}
             disabled={disableCreate}
           >

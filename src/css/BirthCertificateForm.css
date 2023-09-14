@@ -1,5 +1,6 @@
 body {
-    background-color: #FFFFE0;
+    background-color: #181A1B;
+    color: white;
 }
 
 label {
@@ -10,12 +11,27 @@ input::placeholder {
     font-size: larger;
 }
 
-form {
-    background-color: #AEC6CF;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 10px 10px 10px rgba(139, 69, 19, 0.3);
-    /* Add shadow */
+.form-control {
+    color: var(--darkreader-text--bs-body-color);
+    background-color: var(--darkreader-bg--bs-body-bg);
+
+}
+
+.form-control option {
+    /* color: var(--darkreader-text--bs-body-color); */
+    background-color: #181A1B;
+
+}
+
+
+.form-control:focus {
+    color: var(--darkreader-text--bs-body-color);
+    background-color: var(--darkreader-bg--bs-body-bg);
+}
+
+input[type="date"]:focus{
+    background-color: gray;
+    color: #181A1B;
 }
 
 button {
@@ -25,13 +41,14 @@ button {
 .certificate {
 
     justify-content: center;
+    color: black;
 
 }
 
 .certificate span {
     font-smooth: always;
-  }  
-  
+}
+
 .certificate .village-top {
     display: flex;
     position: relative;
@@ -156,7 +173,7 @@ button {
 
     .certificate span {
         font-smooth: always;
-      }  
+    }
 
     .certificate .village-top {
         display: flex;
@@ -283,7 +300,7 @@ button {
 
     .certificate span {
         font-smooth: always;
-      }  
+    }
 
     .certificate .village-top {
         display: flex;
