@@ -4,6 +4,8 @@ import { gu } from "date-fns/locale";
 import html2canvas from "html2canvas";
 import "../css/BirthCertificateForm.css";
 import LoadingBar from "react-top-loading-bar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 export default function BirthCertificateForm() {
   const [name, setName] = useState("");
@@ -426,7 +428,7 @@ const cropOuterImage = (image, left, top, right, bottom) => {
                 className="btn btn-success btn_download"
                 onClick={downloadCertificateAsImage}
               >
-                Download Certificate
+                <FontAwesomeIcon icon={faDownload} />Download Certificate
               </button>
             </div>
           </>
